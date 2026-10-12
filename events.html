@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <h1>Explore College Events</h1>
+        <p>Find an event that interests you!</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Registration</a>
+    </nav>
+
+    <main class="container">
+        <h2>All Events</h2>
+
+        <div class="event-container">
+            <div class="event-card">
+                <h3>Tech Fest 2026</h3>
+                <p>Date: 20 October 2026</p>
+                <p>Venue: College Auditorium</p>
+                <p>A festival of coding, innovation, and robotics.</p>
+            </div>
+
+            <div class="event-card" id="existingCard">
+                <h3>Cultural Fest</h3>
+                <p>Date: 25 October 2026</p>
+                <p>Venue: Main Campus</p>
+                <p>Music, dance, drama, and artistic performances.</p>
+            </div>
+
+            <div class="event-card">
+                <h3>Sports Day</h3>
+                <p>Date: 30 October 2026</p>
+                <p>Venue: Sports Ground</p>
+                <p>Enjoy games, races, and team competitions.</p>
+            </div>
+
+            <div class="event-card">
+                <h3>Science Exhibition</h3>
+                <p>Date: 5 November 2026</p>
+                <p>Venue: Science Block</p>
+                <p>Present creative projects and scientific models.</p>
+            </div>
+        </div>
+
+        <section class="form-section">
+            <h2>Add a New Event</h2>
+
+            <label for="eventName">Enter Event Name:</label>
+            <input type="text" id="eventName"
+                   placeholder="e.g. Photography Competition">
+
+            <button onclick="addEvent()">Add Event</button>
+
+            <p id="eventMessage" aria-live="polite"></p>
+            <div id="newEventList"></div>
+        </section>
+
+        <section class="form-section">
+            <h2>Customize an Event</h2>
+            <button onclick="changeExistingEvent()">
+                Change Cultural Fest Card
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Event Management</p>
+    </footer>
+</body>
+</html>

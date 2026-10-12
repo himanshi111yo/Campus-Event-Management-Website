@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <h1 id="registrationHeading">Student Event Registration</h1>
+        <p>Register now and be a part of the excitement!</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Registration</a>
+    </nav>
+
+    <main class="container">
+        <div class="button-group">
+            <button onclick="changeRegistrationFont()">
+                Change Heading Font Size
+            </button>
+            <button onclick="toggleRegistrationForm()">
+                Show/Hide Registration Form
+            </button>
+        </div>
+
+        <section class="form-section" id="registrationSection">
+            <h2>Registration Form</h2>
+
+            <form id="registrationForm" onsubmit="registerStudent(event)">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName"
+                       placeholder="Enter your full name" required>
+
+                <label for="rollNumber">Student Roll Number:</label>
+                <input type="text" id="rollNumber"
+                       placeholder="Enter your roll number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+                <label for="eventSelection">Select Event:</label>
+                <select id="eventSelection" required>
+                    <option value="">-- Choose an Event --</option>
+                    <option value="Tech Fest 2026">Tech Fest 2026</option>
+                    <option value="Cultural Fest">Cultural Fest</option>
+                    <option value="Sports Day">Sports Day</option>
+                    <option value="Science Exhibition">Science Exhibition</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p id="registrationMessage" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Event Management</p>
+    </footer>
+</body>
+</html>
